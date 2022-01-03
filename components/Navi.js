@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, Platform, TouchableOpacity, Dimensions, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, Platform, TouchableOpacity, Dimensions, SafeAreaView, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import "react-native-gesture-handler";
@@ -19,9 +19,9 @@ const ScreenWidth = Dimensions.get("window").width;
 function HomeScreen({ navigation }) {
     const [vocas, setVoca] = useState([]);
 
-    const addVoca = (word, meaning) => {
+    const addVoca = (word, meaning, wImage, mImage) => {
         const uid = uuid.v4();
-        const list = [...vocas, { id: uid, wordValue: word, meaningValue: meaning, wordImage: null, meanImage: null, checked: false }];
+        const list = [...vocas, { id: uid, wordValue: word, meaningValue: meaning, wordImage: wImage, meanImage: mImage, checked: false }];
         setVoca(list);
         storeData(list);
     };
