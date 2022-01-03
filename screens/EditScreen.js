@@ -25,7 +25,7 @@ export default function EditScreen({ navigation, route }) {
     };
     const addVocaHandler = () => {
         if ((newWord !== "" || wordImage !== null) && (newMean != "" || meanImage !== null)) {
-            route.params.addVoca(newWord, newMean);
+            route.params.addVoca(newWord, newMean, wordImage, meanImage);
             setWord("");
             setMean("");
             navigation.goBack();
@@ -45,7 +45,13 @@ export default function EditScreen({ navigation, route }) {
             allowsEditing: true,
         });
         if (!cancelled) {
-            type == "A" ? setWordImage(uri) : setMeanImage(uri);
+            if (type == "A") {
+                setWordImage(uri);
+                setWord("단어 : 이미지파일");
+            } else {
+                setMeanImage(uri);
+                setMean("뜻 : 이미지파일");
+            }
         }
     };
     const TakeImage = async type => {
@@ -56,7 +62,13 @@ export default function EditScreen({ navigation, route }) {
             allowsEditing: true,
         });
         if (!cancelled) {
-            type == "A" ? setWordImage(uri) : setMeanImage(uri);
+            if (type == "A") {
+                setWordImage(uri);
+                setWord("단어 : 이미지");
+            } else {
+                setMeanImage(uri);
+                setMean("뜻 : 이미지");
+            }
         }
     };
 
@@ -86,7 +98,7 @@ export default function EditScreen({ navigation, route }) {
                             <TouchableOpacity style={styles.cameraBtn} onPress={() => PickImage("A")}>
                                 <Image style={styles.pickerImage} source={Picker} resizeMode="contain" />
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.cameraBtn} onPress={() => TakeImage("B")}>
+                            <TouchableOpacity style={styles.cameraBtn} onPress={() => TakeImage("A")}>
                                 <Image style={styles.cameraImage} source={Camera} resizeMode="contain" />
                             </TouchableOpacity>
                         </View>
@@ -106,10 +118,10 @@ export default function EditScreen({ navigation, route }) {
                         <Text style={{ flex: 0.3 }}></Text>
                         <Text style={styles.Subject}>MEANING</Text>
                         <View style={styles.container4}>
-                            <TouchableOpacity style={styles.cameraBtn} onPress={PickImage}>
+                            <TouchableOpacity style={styles.cameraBtn} onPress={() => PickImage("B")}>
                                 <Image style={styles.pickerImage} source={Picker} resizeMode="contain" />
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.cameraBtn} onPress={TakeImage}>
+                            <TouchableOpacity style={styles.cameraBtn} onPress={() => TakeImage("B")}>
                                 <Image style={styles.cameraImage} source={Camera} resizeMode="contain" />
                             </TouchableOpacity>
                         </View>
