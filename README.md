@@ -1,4 +1,4 @@
 # HelloWord
 react-native app
 
-https://highfalutin-taxicab-2ee.notion.site/HelloWord-ce720249dbf941e19857020f3ea5ae73
+https://neighborly-alder-4ef.notion.site/HelloWord-0bec0c866e194c0191ed79502ce4cffe
