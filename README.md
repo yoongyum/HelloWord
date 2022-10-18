@@ -30,3 +30,6 @@ AsyncStorage를 사용하여 앱이 종료되면 사라지는 데이터의 휘�
 ## Result
 https://user-images.githubusercontent.com/72365815/196349158-9fb5bb02-11f6-44c7-ab0b-6d73027ccb22.mp4
 
+아이폰12프로 기준으로 녹화하였습니다.
+
+앱에 나온 모든 버튼이미지들은 제가 직접 일러스트레이터와 XD로 직접 디자인하고 만들었습니다.
