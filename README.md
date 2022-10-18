@@ -1,4 +1,32 @@
-# HelloWord
-react-native app
+# React-native Hybrid app
 
-https://neighborly-alder-4ef.notion.site/HelloWord-0bec0c866e194c0191ed79502ce4cffe
+단어 저장 및 자가 테스트 어플
+
+프로젝트 명: **HelloWord**
+
+프로젝트 기간: `2021.06 - 2022.01`
+
+### 주제 선정 이유
+단어를 외울 때, 수학 공식이나 일본어, 한자, 등 휴대폰으로 타이핑해서 저장하기 힘든 것들을 
+사진촬영이나 이미지 캡처를 통해서 저장한 뒤 지하철이나 대중교통을 이용할 때 외우기 편하도록 하기 위해서 만들었습니다.
+
+### 가이드
+1. 새 단어 만들기
+- 단어와 뜻을 저장
+- 타이핑 또는 카메라 버튼, 이미지 가져오기 버튼을 사용하여 저장 가능
+2. 테스트 시작
+- 단어들을 셔플
+- 하단 영역 터치 중에는 뜻이 볼 수 있음
+- 하단 영역 스와이프 시 다음 단어로 넘어감
+3. 단어 삭제
+- 단어를 스와이프시 단어를 삭제
+
+### 사용 스택
+`React Native`, `JavaScript`, `Node.js` <br>
+
+AsyncStorage를 사용하여 앱이 종료되면 사라지는 데이터의 휘발성을 극복하여 앱을 다시 실행시키더라도 Local Database에 단어가 남아있음
+
+
+## Result
+https://user-images.githubusercontent.com/72365815/196349158-9fb5bb02-11f6-44c7-ab0b-6d73027ccb22.mp4
+
